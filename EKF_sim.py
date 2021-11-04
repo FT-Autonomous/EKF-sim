@@ -62,7 +62,9 @@ while running:
     v_x, v_y = odom_values
     car_x += v_x
     car_y += v_y
-    
+    car_x, car_y = int(car_x), int(car_y)
+
+
     # Draws position using odom data - yellow/green
     pygame.draw.rect(screen, (200, 255, 80), pygame.Rect(car_x, car_y, car_sim.CAR_DIM[0], car_sim.CAR_DIM[1]))
     # Draws position using lidar data - blue
